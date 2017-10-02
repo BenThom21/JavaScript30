@@ -7,6 +7,25 @@
 </head>
 <body>
 <script>
+
+  const pressed = [];
+  const secretCode = 'wesbos';
+
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    // did now know this negative started from the back!
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if (pressed.join('').includes(secretCode)) {
+    console.log('Got it!');
+    // insert shurggie about cornify
+    cornify_add();
+  }
+  console.log(pressed);
+  });
+
+
+
 </script>
 </body>
 </html>
